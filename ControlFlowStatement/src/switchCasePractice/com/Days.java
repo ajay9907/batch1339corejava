@@ -1,0 +1,70 @@
+package switchCasePractice.com;
+
+import java.util.Scanner;
+
+//Print the month name from a month number.
+
+public class Days {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.err.println("Enter Your Choice (1-2).");
+
+		int num = sc.nextInt();
+
+		switch (num) {
+
+		case 1:
+			System.out.println(" January");
+			break;
+
+		case 2:
+			System.out.println("February ");
+			break;
+
+		case 3:
+			System.out.println("March ");
+			break;
+
+		case 4:
+			System.out.println("April ");
+			break;
+
+		case 5:
+			System.out.println("May ");
+			break;
+
+		case 6:
+			System.out.println("June ");
+			break;
+
+		case 7:
+			System.out.println("July: ");
+			break;
+
+		case 8:
+			System.out.println("Augest ");
+			break;
+		case 9:
+			System.out.println("Septembar ");
+			break;
+		case 10:
+			System.out.println("Octomber ");
+			break;
+		case 11:
+			System.out.println("November ");
+			break;
+		case 12:
+			System.out.println("December ");
+			break;
+
+		default:
+			System.err.println("--INVALID INPUT--");
+			sc.close();
+
+		}
+
+	}
+
+}
