@@ -1,6 +1,6 @@
 package com.saturdaypractice;
 
-public class B {
+public class B extends A {
 	public B() {
 		System.out.println("B");
 	}

@@ -6,10 +6,11 @@ public class A {
 	String name;
 	String city;
 	long phNo;
-	Student stud = new Student();
+	String StudName;
+
+	Student s = new Student();
 
 	public A() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int age1(int age) {
@@ -30,7 +31,7 @@ public class A {
 
 	}
 
-	public Student display() {
-		return stud;
+	public Student display(String sName) {
+		return s;
 	}
 }

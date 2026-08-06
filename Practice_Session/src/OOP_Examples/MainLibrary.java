@@ -9,8 +9,7 @@ public class MainLibrary {
 		lu.display();
 		System.out.println("---------");
 		lu.issueBook();
-		
-		
+
 		lu.returnBook();
 		System.out.println("---------");
 
@@ -25,6 +24,6 @@ public class MainLibrary {
 		lu.issueBook();
 		lu.returnBook();
 		lu.calcFine();
-		
+
 	}
 }

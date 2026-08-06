@@ -5,7 +5,7 @@ public class MainClass {
 		A a = new A();
 		System.out.println("Age is:" + a.age1(20));
 		System.out.println(a.cityDisplay("Beed"));
-		System.out.println(a.display());
+		System.out.println(a.display("Ajay Agwan"));
 
 	}
 
