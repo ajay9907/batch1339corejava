@@ -70,11 +70,11 @@ public class DemoLoops {
 //			System.out.println();
 //			updation;
 //		}while();//condition
-		
+
 		int i = 1;
 		do {
 			System.out.println("Hello Ajay");
-		} while (true);
+		} while (i <= 10);//   it is loop iteration until conditon false.
 
 	}
 
