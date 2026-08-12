@@ -9,11 +9,18 @@ public class String_Length {
 		System.out.println(fName);
 		System.out.println(name.hashCode());
 		System.out.println(fName.hashCode());
+		
 		System.out.println(System.identityHashCode(name));
 		System.out.println(System.identityHashCode(fName));
 
 		System.out.println(name == fName);
 		System.out.println(name.equals(fName));
+
+		System.out.println(name.toUpperCase());
+		System.out.println(fName.toLowerCase());
+		
+		System.out.println(name.contains(fName));
+		
 
 	}
 }
