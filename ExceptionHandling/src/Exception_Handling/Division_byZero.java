@@ -12,7 +12,10 @@ public class Division_byZero {
 			int c = a / b;
 			System.out.println(" Calculate Division of : " + c);
 		} catch (ArithmeticException e) {
-			System.out.println("Not Divison by zero");
+			System.out.println("Cannot Divison by zero");
+		} catch (NumberFormatException e1) {
+			System.out.println("Invalid Number Format ");
+
 		} finally {
 			System.out.println("always finally block executes. ");
 		}
