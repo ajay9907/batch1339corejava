@@ -1,19 +1,23 @@
 package com.LogicalPrograms;
 
+import java.util.Scanner;
+
 public class Reverse {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        int num = 123;
-        int rev = 0;
+		Scanner sc = new Scanner(System.in);
 
-        while (num > 0) {
+		System.out.print("Enter Numbers: ");
+		int num = sc.nextInt();
 
-            int digit = num % 10;      
-            rev = rev * 10 + digit;    
-            num = num / 10;            
-        }
+		int rev = 0;
+		while (num >0) {
+			int digit = num % 10;
+			rev = rev * 10 + digit;
+			num /= 10;
 
-        System.out.println("Reverse Number : " + rev);
-    }
+			System.out.print("\nReverse Number is : " + rev);
+		}
+	}
 }
