@@ -9,20 +9,20 @@ public class Palindrome {
 		System.out.print("Enter Number :");
 
 		int num = sc.nextInt();
-		
-		int original = num;
+
+		int pal = num;
 		int rev = 0;
+
 		while (num > 0) {
-			int digit = num % 10;
+			int digit;
+			digit = num % 10;
 			rev = rev * 10 + digit;
-			num = num / 10;
-
+			num /= 10;
 		}
-		if (original == rev) {
-			System.out.println("Is palindrome number.");
-
+		if (pal == rev) {
+			System.out.println("Is Palindrome Number :" + rev);
 		} else {
-			System.out.println("Is not Palindrome");
+			System.out.println("Is Not Palindrome Number :" + rev);
 		}
 	}
 }
