@@ -1,4 +1,4 @@
-package StringLiterals_SCP;
+package String;
 
 public class DemoString {
 	public static void main(String[] args) {
