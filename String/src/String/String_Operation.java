@@ -49,15 +49,14 @@ public class String_Operation {
 //		System.out.println(fname.intern());
 
 //		System.out.println(name.isBlank());
-		
+
 //		System.out.println(name.isEmpty());
-		
+
 //		System.out.println(name.length());
-		
+
 //		System.out.println(name.repeat(3));
-		
-		System.out.println(name.replace("Ajay", "Ajyaa"));
-		
+
+//		System.out.println(name.replace("Ajay", "Ajyaa"));
 
 	}
 
