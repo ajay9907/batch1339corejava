@@ -11,9 +11,9 @@ public class CountVovels {
 
 		String vov = sc.nextLine();
 
-		int count = 0;
+		int count = 1;
 
-		for (int i = 0; i < vov.length(); i++) {
+		for (int i = 1; i < vov.length(); i++) {
 			char ch = vov.charAt(i);
 
 			if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
