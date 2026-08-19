@@ -12,7 +12,6 @@ public class Reverse {
 			rev = num % 10;
 			System.out.print(rev);
 			num = num / 10;
-
 		}
 	}
 }
