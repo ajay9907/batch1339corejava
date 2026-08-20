@@ -12,7 +12,7 @@ public class Max_No {
 
 			}
 		}
-		System.out.println("Max No:" + max);
+		System.out.println("Max No :" + max);
 	}
 
 }
