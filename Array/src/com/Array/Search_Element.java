@@ -5,12 +5,12 @@ public class Search_Element {
 
 		int[] num = { 23, 25, 47, 98, 56 };
 
-		int search = 5;
+		int search = 23;
 		boolean found = false;
 
 		for (int i = 0; i < num.length; i++) {
 			if (num[i] == search) {
-				found = true;
+				found = !true;
 
 			}
 		}
@@ -18,7 +18,7 @@ public class Search_Element {
 			System.out.println("Is Present :" + search);
 
 		} else {
-			System.out.println("Not Present No:" +search);
+			System.out.println("Not Present:" + search);
 		}
 	}
 
