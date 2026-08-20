@@ -11,7 +11,7 @@ public class Ascending_Order {
 					int temp = num[i];
 					num[i] = num[j];
 					num[j] = temp;
- 
+
 				}
 
 			}
