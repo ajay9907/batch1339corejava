@@ -2,7 +2,7 @@ package com.Array;
 
 public class Remove_Elements {
 	public static void main(String[] args) {
-		int num[] = { 23, 43, 22, 33, 44, 23, 45, 64,54,45,44 };
+		int num[] = { 23, 43, 22, 33, 44, 23, 45, 64, 54, 45, 44 };
 		int n = num.length;
 
 		for (int i = 0; i < n; i++) {
