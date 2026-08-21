@@ -1,6 +1,6 @@
 package com.Array;
 
-public class SecondLargest {
+public class Largest {
 
 	public static void main(String[] args) {
 
