@@ -9,11 +9,10 @@ public class Descending {
 		for (int i = 0; i < n; i++) {
 			for (int j = i + 1; j < n; j++) {
 				if (num[i] < num[j]) {
-//					int temp = num[i];
-//					num[i] = num[j];
-//					num[j] = temp;
-					num[i]=num[i+1];
-				}
+					int temp = num[i];
+					num[i] = num[j];
+					num[j] = temp;
+ 				}
 			}
 		}
 		System.out.println("You're Descending Order:");
