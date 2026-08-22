@@ -1,4 +1,4 @@
-package com.Array;
+package com._1DArray;
 
 public class Even_Odd {
 	public static void main(String[] args) {

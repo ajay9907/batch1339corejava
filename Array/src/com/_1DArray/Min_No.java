@@ -1,4 +1,4 @@
-package com.Array;
+package com._1DArray;
 
 public class Min_No {
 	public static void main(String[] args) {

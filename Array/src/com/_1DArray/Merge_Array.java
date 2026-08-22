@@ -1,8 +1,8 @@
-package com.Array;
+package com._1DArray;
 
 public class Merge_Array {
 	public static void main(String[] args) {
-		int[] arr1 = { 10, 20, 30 ,67};
+		int[] arr1 = { 10, 20, 30, 67 };
 		int[] arr2 = { 40, 50, 60 };
 
 		int[] arr3 = new int[arr1.length + arr2.length];
