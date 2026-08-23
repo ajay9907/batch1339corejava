@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Even {
 	public static void main(String[] args) {
-		int even = 0;
+//		int even = 0;
 		int arr[][];
 		arr = new int[3][3];
 //		int arr1[][] = { { 11, 21, 34 }, { 56, 75, 43 }, { 43, 65, 33 } };
@@ -35,9 +35,10 @@ public class Even {
 			for (int j = 0; j < arr[i].length; j++) {
 
 				if (arr[i][j] % 2 == 0) {
-					even = arr[i][j];
 
-					System.out.print(even + " ");
+					System.out.println("even :" + arr[i][j]);
+				} else {
+					System.out.println("Odd :" + arr[i][j]);
 				}
 			}
 			System.out.println();
