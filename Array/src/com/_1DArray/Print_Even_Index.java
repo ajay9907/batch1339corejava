@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //Write a Java program to print the elements that are present at even indexes of a 1D array.
 
-public class Print_Even {
+public class Print_Even_Index {
 	public static void main(String[] args) {
 		int arr[];
 		arr = new int[4];
@@ -20,7 +20,7 @@ public class Print_Even {
 		for (int i = 0; i < arr.length; i++) {
 			if (i % 2 == 0) {
 
-				System.out.print("Even "+arr[i] + " ");
+				System.out.print("Even " + arr[i] + " ");
 			}
 		}
 
