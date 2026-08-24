@@ -8,7 +8,6 @@ public class Print_All_Sum {
 
 	public static void main(String[] args) {
 		int sum = 0;
-		int val = 0;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Your Input :");
 
@@ -18,9 +17,9 @@ public class Print_All_Sum {
 		for (int i = 0; i < n; i++) {
 			arr[i] = sc.nextInt();
 			sum += arr[i];
-			val = sum;
-			System.out.println(val + " ");
 		}
+		System.out.println(sum + " ");
+
 	}
 
 }
