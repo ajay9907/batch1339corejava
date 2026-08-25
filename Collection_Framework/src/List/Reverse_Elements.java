@@ -15,7 +15,7 @@ public class Reverse_Elements {
 		a.add(98);
 
 		System.out.println("Reverse List :" + a.reversed());
-		
+
 	}
 
 }
