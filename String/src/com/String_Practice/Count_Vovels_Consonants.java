@@ -10,7 +10,7 @@ public class Count_Vovels_Consonants {
 
 		System.out.println("Enter String :");
 		String name = sc.nextLine();
-		
+
 		int vovelCount = 0;
 		int conCount = 0;
 		for (int i = 0; i < name.length(); i++) {
