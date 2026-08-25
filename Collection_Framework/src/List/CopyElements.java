@@ -20,9 +20,9 @@ public class CopyElements {
 
 		for (Object b : a) {
 			a1.add(b);
- 
+
 		}
-		System.out.println("Copied All Elements From List "+a1);
+		System.out.println("Copied All Elements From List " + a1);
 	}
 
 }
