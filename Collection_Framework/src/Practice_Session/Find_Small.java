@@ -18,9 +18,10 @@ public class Find_Small {
 
 //		System.out.println(l);
 
-		int min = l.get(0);
+		int min = l.get(3);
+//		System.out.println(min);
 
-		for (int i = 0; i < l.size(); i++) {
+		for (int i = 1; i < l.size(); i++) {
 			if (l.get(i) < min) {
 				min = l.get(i);
 			}
