@@ -22,7 +22,8 @@ public class Student_Mark_Per {
 		System.out.println("Your Subject :" + sub);
 
 		int total = math + science + english;
-
+		
+     //calculation 
 		System.out.println("Total Marks: " + total);
 		double percent = total / 300.00 * 100;
 		System.out.println("Percentage :" + percent);
