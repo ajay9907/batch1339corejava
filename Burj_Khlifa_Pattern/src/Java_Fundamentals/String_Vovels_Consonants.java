@@ -5,7 +5,7 @@ package Java_Fundamentals;
 public class String_Vovels_Consonants {
 	public static void main(String[] args) {
 
-		String str = "   ";
+		String str = "";
 		char ch = 'a';
 		int vov = 0;
 		int cons = 0;
