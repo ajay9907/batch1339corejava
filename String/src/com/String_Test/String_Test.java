@@ -107,17 +107,18 @@ public class String_Test {
 
 //		String s = "Java,is-Easy ";
 //		String arr[] = s.split(",");// This method works as if by invoking the two-argument split method with the
-									// given expression and a limit argument of zero. Trailing empty strings are
-									// therefore not included in the resulting array.
+		// given expression and a limit argument of zero. Trailing empty strings are
+		// therefore not included in the resulting array.
 //		for (int i = 0; i < arr.length; i++) {
 //			System.out.println(arr[i]);
 //		}
 
 		String a = "ABC";
-		byte[] b = a.getBytes();
-		System.out.println(b[0]);
-		System.out.println(b[1]);
-		System.out.println(b[2]);
+//		byte[] b = a.getBytes();
+//		System.out.println(b[0]);
+//		System.out.println(b[1]);
+//		System.out.println(b[2]);
+
 	}
 
 }
