@@ -38,7 +38,7 @@ public class Buffer_Builder_Test {
 
 		StringBuilder sb1 = new StringBuilder("Ajyaa");
 		StringBuilder sb2 = new StringBuilder("Ajyaa");
-		
+
 		System.out.println(sb1.equals(sb2));
 	}
 }
