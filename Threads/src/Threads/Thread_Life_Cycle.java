@@ -22,5 +22,6 @@ public class Thread_Life_Cycle {
 //
 		System.out.println(t1.getState());
 //
+		
 	}
 }
