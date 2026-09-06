@@ -19,10 +19,12 @@ public class Remove_Duplicate {
                 temp[count++] = arr[i];
              }
         }
-
         System.out.print("Unique Array: ");
-        for (int i = 0; i < count; i++) {
-            System.out.print(temp[i] + " ");
-        }
+        
+		for (int i : temp) {
+			System.out.println(i);
+		}
+        	
+        
     }
 }
