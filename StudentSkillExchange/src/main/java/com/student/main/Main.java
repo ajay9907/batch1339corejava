@@ -18,570 +18,425 @@ import com.student.service.FeedbackService;
 
 public class Main {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
-        // ================= SERVICES =================
+		// ================= SERVICES =================
 
-        StudentService studentService =
-                new StudentService();
+		StudentService studentService = new StudentService();
 
-        StudentSkillService studentSkillService =
-                new StudentSkillService();
+		StudentSkillService studentSkillService = new StudentSkillService();
 
-        SkillService skillService =
-                new SkillService();
+		SkillService skillService = new SkillService();
 
-        MatchingService matchingService =
-                new MatchingService();
+		MatchingService matchingService = new MatchingService();
 
-        ExchangeRequestService exchangeRequestService =
-                new ExchangeRequestService();
+		ExchangeRequestService exchangeRequestService = new ExchangeRequestService();
 
-        SessionService sessionService =
-                new SessionService();
+		SessionService sessionService = new SessionService();
 
-        FeedbackService feedbackService =
-                new FeedbackService();
+		FeedbackService feedbackService = new FeedbackService();
 
-        // ================= MAIN MENU =================
+		// ================= MAIN MENU =================
 
-        while (true) {
+		while (true) {
 
-            System.out.println(
-                    "\n===== STUDENT SKILL EXCHANGE SYSTEM =====");
+			System.out.println("\n===== STUDENT SKILL EXCHANGE SYSTEM =====");
 
-            System.out.println("1. Register");
-            System.out.println("2. Login");
-            System.out.println("3. Exit");
+			System.out.println("1. Register");
+			System.out.println("2. Login");
+			System.out.println("3. Exit");
 
-            System.out.print("Enter your choice: ");
+			System.out.print("Enter your choice: ");
 
-            int choice = sc.nextInt();
-            sc.nextLine();
+			int choice = sc.nextInt();
+			sc.nextLine();
 
-            switch (choice) {
+			switch (choice) {
 
-            // ================= REGISTER =================
+			// ================= REGISTER =================
 
-            case 1:
+			case 1:
 
-                Student student = new Student();
+				Student student = new Student();
 
-                System.out.print("Enter Name: ");
-                student.setName(sc.nextLine());
+				System.out.print("Enter Name: ");
+				student.setName(sc.nextLine());
 
-                System.out.print("Enter Email: ");
-                student.setEmail(sc.nextLine());
+				System.out.print("Enter Email: ");
+				student.setEmail(sc.nextLine());
 
-                System.out.print("Enter Password: ");
-                student.setPassword(sc.nextLine());
+				System.out.print("Enter Password: ");
+				student.setPassword(sc.nextLine());
 
-                System.out.print("Enter Mobile: ");
-                student.setMobile(sc.nextLine());
+				System.out.print("Enter Mobile: ");
+				student.setMobile(sc.nextLine());
 
-                System.out.print("Enter Course: ");
-                student.setCourse(sc.nextLine());
+				System.out.print("Enter Course: ");
+				student.setCourse(sc.nextLine());
 
-                System.out.print("Enter Year: ");
-                student.setYear(sc.nextInt());
+				System.out.print("Enter Year: ");
+				student.setYear(sc.nextInt());
 
-                sc.nextLine();
+				sc.nextLine();
 
-                studentService.registerStudent(student);
+				studentService.registerStudent(student);
 
-                break;
+				break;
 
-            // ================= LOGIN =================
+			// ================= LOGIN =================
 
-            case 2:
+			case 2:
 
-                System.out.print("Enter Email: ");
-                String email = sc.nextLine();
+				System.out.print("Enter Email: ");
+				String email = sc.nextLine();
 
-                System.out.print("Enter Password: ");
-                String password = sc.nextLine();
+				System.out.print("Enter Password: ");
+				String password = sc.nextLine();
 
-                Student loggedInStudent =
-                        studentService.loginStudent(
-                                email,
-                                password);
+				Student loggedInStudent = studentService.loginStudent(email, password);
 
-                if (loggedInStudent != null) {
+				if (loggedInStudent != null) {
 
-                    System.out.println(
-                            "\nLogin Successful");
+					System.out.println("\nLogin Successful");
 
-                    System.out.println(
-                            "Welcome "
-                            + loggedInStudent.getName());
+					System.out.println("Welcome " + loggedInStudent.getName());
 
-                    // ================= STUDENT MENU =================
+					// ================= STUDENT MENU =================
 
-                    while (true) {
+					while (true) {
 
-                        System.out.println(
-                                "\n===== STUDENT MENU =====");
+						System.out.println("\n===== STUDENT MENU =====");
 
-                        System.out.println("1. View Profile");
-                        System.out.println("2. Update Profile");
-                        System.out.println("3. View Available Skills");
-                        System.out.println("4. Add Skill");
-                        System.out.println("5. View My Skills");
-                        System.out.println("6. Find Skill Matches");
-                        System.out.println("7. Send Exchange Request");
-                        System.out.println("8. View My Requests");
-                        System.out.println("9. Accept/Reject Request");
-                        System.out.println("10. Schedule Session");
-                        System.out.println("11. View Sessions");
-                        System.out.println("12. Update Session Status");
-                        System.out.println("13. Give Feedback");
-                        System.out.println("14. View Feedback");
-                        System.out.println("15. Logout");
+						System.out.println("1. View Profile");
+						System.out.println("2. Update Profile");
+						System.out.println("3. View Available Skills");
+						System.out.println("4. Add Skill");
+						System.out.println("5. View My Skills");
+						System.out.println("6. Find Skill Matches");
+						System.out.println("7. Send Exchange Request");
+						System.out.println("8. View My Requests");
+						System.out.println("9. Accept/Reject Request");
+						System.out.println("10. Schedule Session");
+						System.out.println("11. View Sessions");
+						System.out.println("12. Update Session Status");
+						System.out.println("13. Give Feedback");
+						System.out.println("14. View Feedback");
+						System.out.println("15. Logout");
 
-                        System.out.print(
-                                "Enter your choice: ");
+						System.out.print("Enter your choice: ");
 
-                        int studentChoice =
-                                sc.nextInt();
+						int studentChoice = sc.nextInt();
 
-                        sc.nextLine();
+						sc.nextLine();
 
-                        switch (studentChoice) {
+						switch (studentChoice) {
 
-                        // ================= VIEW PROFILE =================
+						// ================= VIEW PROFILE =================
 
-                        case 1:
+						case 1:
 
-                            System.out.println(
-                                    "\n===== MY PROFILE =====");
+							System.out.println("\n===== MY PROFILE =====");
 
-                            System.out.println(
-                                    "ID: "
-                                    + loggedInStudent
-                                            .getStudentId());
+							System.out.println("ID: " + loggedInStudent.getStudentId());
 
-                            System.out.println(
-                                    "Name: "
-                                    + loggedInStudent
-                                            .getName());
+							System.out.println("Name: " + loggedInStudent.getName());
 
-                            System.out.println(
-                                    "Email: "
-                                    + loggedInStudent
-                                            .getEmail());
+							System.out.println("Email: " + loggedInStudent.getEmail());
 
-                            System.out.println(
-                                    "Mobile: "
-                                    + loggedInStudent
-                                            .getMobile());
+							System.out.println("Mobile: " + loggedInStudent.getMobile());
 
-                            System.out.println(
-                                    "Course: "
-                                    + loggedInStudent
-                                            .getCourse());
+							System.out.println("Course: " + loggedInStudent.getCourse());
 
-                            System.out.println(
-                                    "Year: "
-                                    + loggedInStudent
-                                            .getYear());
+							System.out.println("Year: " + loggedInStudent.getYear());
 
-                            break;
+							break;
 
-                        // ================= UPDATE PROFILE =================
+						// ================= UPDATE PROFILE =================
 
-                        case 2:
+						case 2:
 
-                            System.out.print(
-                                    "Enter New Name: ");
+							System.out.print("Enter New Name: ");
 
-                            loggedInStudent.setName(
-                                    sc.nextLine());
+							loggedInStudent.setName(sc.nextLine());
 
-                            System.out.print(
-                                    "Enter New Mobile: ");
+							System.out.print("Enter New Mobile: ");
 
-                            loggedInStudent.setMobile(
-                                    sc.nextLine());
+							loggedInStudent.setMobile(sc.nextLine());
 
-                            System.out.print(
-                                    "Enter New Course: ");
+							System.out.print("Enter New Course: ");
 
-                            loggedInStudent.setCourse(
-                                    sc.nextLine());
+							loggedInStudent.setCourse(sc.nextLine());
 
-                            System.out.print(
-                                    "Enter New Year: ");
+							System.out.print("Enter New Year: ");
 
-                            loggedInStudent.setYear(
-                                    sc.nextInt());
+							loggedInStudent.setYear(sc.nextInt());
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            studentService.updateStudent(
-                                    loggedInStudent);
+							studentService.updateStudent(loggedInStudent);
 
-                            break;
+							break;
 
-                        // ================= AVAILABLE SKILLS =================
+						// ================= AVAILABLE SKILLS =================
 
-                        case 3:
+						case 3:
 
-                            System.out.println(
-                                    "\n===== AVAILABLE SKILLS =====");
+							System.out.println("\n===== AVAILABLE SKILLS =====");
 
-                            skillService.getAllSkills();
+							skillService.getAllSkills();
 
-                            break;
+							break;
 
-                        // ================= ADD SKILL =================
+						// ================= ADD SKILL =================
 
-                        case 4:
+						case 4:
 
-                            StudentSkill studentSkill =
-                                    new StudentSkill();
+							StudentSkill studentSkill = new StudentSkill();
 
-                            studentSkill.setStudentId(
-                                    loggedInStudent
-                                            .getStudentId());
+							studentSkill.setStudentId(loggedInStudent.getStudentId());
 
-                            System.out.print(
-                                    "Enter Skill ID: ");
+							System.out.print("Enter Skill ID: ");
 
-                            studentSkill.setSkillId(
-                                    sc.nextInt());
+							studentSkill.setSkillId(sc.nextInt());
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            System.out.print(
-                                    "Enter Skill Type "
-                                    + "(TEACH/LEARN): ");
+							System.out.print("Enter Skill Type " + "(TEACH/LEARN): ");
 
-                            studentSkill.setSkillType(
-                                    sc.nextLine()
-                                            .toUpperCase());
+							studentSkill.setSkillType(sc.nextLine().toUpperCase());
 
-                            studentSkillService
-                                    .addStudentSkill(
-                                            studentSkill);
+							studentSkillService.addStudentSkill(studentSkill);
 
-                            break;
+							break;
 
-                        // ================= VIEW MY SKILLS =================
+						// ================= VIEW MY SKILLS =================
 
-                        case 5:
+						case 5:
 
-                            System.out.println(
-                                    "\n===== MY SKILLS =====");
+							System.out.println("\n===== MY SKILLS =====");
 
-                            studentSkillService
-                                    .getSkillsByStudentId(
-                                            loggedInStudent
-                                                    .getStudentId());
+							studentSkillService.getSkillsByStudentId(loggedInStudent.getStudentId());
 
-                            break;
+							break;
 
-                        // ================= FIND MATCHES =================
+						// ================= FIND MATCHES =================
 
-                        case 6:
+						case 6:
 
-                            System.out.println(
-                                    "\n===== SKILL MATCHES =====");
+							System.out.println("\n===== SKILL MATCHES =====");
 
-                            matchingService.findMatches(
-                                    loggedInStudent
-                                            .getStudentId());
+							matchingService.findMatches(loggedInStudent.getStudentId());
 
-                            break;
+							break;
 
-                        // ================= SEND REQUEST =================
+						// ================= SEND REQUEST =================
 
-                        case 7:
+						case 7:
 
-                            ExchangeRequest request =
-                                    new ExchangeRequest();
+							ExchangeRequest request = new ExchangeRequest();
 
-                            request.setSenderId(
-                                    loggedInStudent
-                                            .getStudentId());
+							request.setSenderId(loggedInStudent.getStudentId());
 
-                            System.out.print(
-                                    "Enter Receiver Student ID: ");
+							System.out.print("Enter Receiver Student ID: ");
 
-                            request.setReceiverId(
-                                    sc.nextInt());
+							request.setReceiverId(sc.nextInt());
 
-                            System.out.print(
-                                    "Enter Skill ID: ");
+							System.out.print("Enter Skill ID: ");
 
-                            request.setSkillId(
-                                    sc.nextInt());
+							request.setSkillId(sc.nextInt());
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            request.setStatus(
-                                    "PENDING");
+							request.setStatus("PENDING");
 
-                            request.setRequestDate(
-                                    java.sql.Date.valueOf(
-                                            java.time.LocalDate
-                                                    .now()));
+							request.setRequestDate(java.sql.Date.valueOf(java.time.LocalDate.now()));
 
-                            exchangeRequestService
-                                    .sendRequest(request);
+							exchangeRequestService.sendRequest(request);
 
-                            break;
+							break;
 
-                        // ================= VIEW REQUESTS =================
+						// ================= VIEW REQUESTS =================
 
-                        case 8:
+						case 8:
 
-                            System.out.println(
-                                    "\n===== MY REQUESTS =====");
+							System.out.println("\n===== MY REQUESTS =====");
 
-                            exchangeRequestService
-                                    .getRequestsByReceiverId(
-                                            loggedInStudent
-                                                    .getStudentId());
+							exchangeRequestService.getRequestsByReceiverId(loggedInStudent.getStudentId());
 
-                            break;
+							break;
 
-                        // ================= ACCEPT / REJECT =================
+						// ================= ACCEPT / REJECT =================
 
-                        case 9:
+						case 9:
 
-                            System.out.print(
-                                    "Enter Request ID: ");
+							System.out.print("Enter Request ID: ");
 
-                            int requestId =
-                                    sc.nextInt();
+							int requestId = sc.nextInt();
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            System.out.print(
-                                    "Enter Status "
-                                    + "(ACCEPTED/REJECTED): ");
+							System.out.print("Enter Status " + "(ACCEPTED/REJECTED): ");
 
-                            String status =
-                                    sc.nextLine()
-                                            .toUpperCase();
+							String status = sc.nextLine().toUpperCase();
 
-                            exchangeRequestService
-                                    .updateRequestStatus(
-                                            requestId,
-                                            status);
+							exchangeRequestService.updateRequestStatus(requestId, status);
 
-                            break;
+							break;
 
-                        // ================= SCHEDULE SESSION =================
+						// ================= SCHEDULE SESSION =================
 
-                        case 10:
+						case 10:
 
-                            Session session =
-                                    new Session();
+							Session session = new Session();
 
-                            System.out.print(
-                                    "Enter Request ID: ");
+							System.out.print("Enter Request ID: ");
 
-                            session.setRequestId(
-                                    sc.nextInt());
+							session.setRequestId(sc.nextInt());
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            System.out.print(
-                                    "Enter Session Date "
-                                    + "(YYYY-MM-DD): ");
+							System.out.print("Enter Session Date " + "(YYYY-MM-DD): ");
 
-                            String sessionDate =
-                                    sc.nextLine();
+							String sessionDate = sc.nextLine();
 
-                            session.setSessionDate(
-                                    java.sql.Date.valueOf(
-                                            sessionDate));
+							session.setSessionDate(java.sql.Date.valueOf(sessionDate));
 
-                            System.out.print(
-                                    "Enter Session Time "
-                                    + "(HH:MM:SS): ");
+							System.out.print("Enter Session Time " + "(HH:MM:SS): ");
 
-                            String sessionTime =
-                                    sc.nextLine();
+							String sessionTime = sc.nextLine();
 
-                            session.setSessionTime(
-                                    java.sql.Time.valueOf(
-                                            sessionTime));
+							session.setSessionTime(java.sql.Time.valueOf(sessionTime));
 
-                            System.out.print(
-                                    "Enter Mode "
-                                    + "(ONLINE/OFFLINE): ");
+							System.out.print("Enter Mode " + "(ONLINE/OFFLINE): ");
 
-                            session.setMode(
-                                    sc.nextLine()
-                                            .toUpperCase());
+							session.setMode(sc.nextLine().toUpperCase());
 
-                            session.setStatus(
-                                    "SCHEDULED");
+							session.setStatus("SCHEDULED");
 
-                            sessionService
-                                    .scheduleSession(
-                                            session);
+							sessionService.scheduleSession(session);
 
-                            break;
+							break;
 
-                        // ================= VIEW SESSIONS =================
+						// ================= VIEW SESSIONS =================
 
-                        case 11:
+						case 11:
 
-                            System.out.println(
-                                    "\n===== MY SESSIONS =====");
+							System.out.println("\n===== MY SESSIONS =====");
 
-                            System.out.print(
-                                    "Enter Request ID: ");
+							System.out.print("Enter Request ID: ");
 
-                            int viewRequestId =
-                                    sc.nextInt();
+							int viewRequestId = sc.nextInt();
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            sessionService
-                                    .getSessionsByRequestId(
-                                            viewRequestId);
+							sessionService.getSessionsByRequestId(viewRequestId);
 
-                            break;
+							break;
 
-                        // ================= UPDATE SESSION =================
+						// ================= UPDATE SESSION =================
 
-                        case 12:
+						case 12:
 
-                            System.out.print(
-                                    "Enter Session ID: ");
+							System.out.print("Enter Session ID: ");
 
-                            int sessionId =
-                                    sc.nextInt();
+							int sessionId = sc.nextInt();
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            System.out.print(
-                                    "Enter Status "
-                                    + "(SCHEDULED/COMPLETED/CANCELLED): ");
+							System.out.print("Enter Status " + "(SCHEDULED/COMPLETED/CANCELLED): ");
 
-                            String sessionStatus =
-                                    sc.nextLine()
-                                            .toUpperCase();
+							String sessionStatus = sc.nextLine().toUpperCase();
 
-                            sessionService
-                                    .updateSessionStatus(
-                                            sessionId,
-                                            sessionStatus);
+							sessionService.updateSessionStatus(sessionId, sessionStatus);
 
-                            break;
+							break;
 
-                        // ================= GIVE FEEDBACK =================
+						// ================= GIVE FEEDBACK =================
 
-                        case 13:
+						case 13:
 
-                            Feedback feedback =
-                                    new Feedback();
+							Feedback feedback = new Feedback();
 
-                            System.out.print(
-                                    "Enter Session ID: ");
+							System.out.print("Enter Session ID: ");
 
-                            feedback.setSessionId(
-                                    sc.nextInt());
+							feedback.setSessionId(sc.nextInt());
 
-                            System.out.print(
-                                    "Enter Rating "
-                                    + "(1-5): ");
+							System.out.print("Enter Rating " + "(1-5): ");
 
-                            feedback.setRating(
-                                    sc.nextInt());
+							feedback.setRating(sc.nextInt());
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            feedback.setStudentId(
-                                    loggedInStudent
-                                            .getStudentId());
+							feedback.setStudentId(loggedInStudent.getStudentId());
 
-                            System.out.print(
-                                    "Enter Comment: ");
+							System.out.print("Enter Comment: ");
 
-                            feedback.setComment(
-                                    sc.nextLine());
+							feedback.setComment(sc.nextLine());
 
-                            feedbackService
-                                    .addFeedback(
-                                            feedback);
+							feedbackService.addFeedback(feedback);
 
-                            break;
+							break;
 
-                        // ================= VIEW FEEDBACK =================
+						// ================= VIEW FEEDBACK =================
 
-                        case 14:
+						case 14:
 
-                            System.out.println(
-                                    "\n===== SESSION FEEDBACK =====");
+							System.out.println("\n===== SESSION FEEDBACK =====");
 
-                            System.out.print(
-                                    "Enter Session ID: ");
+							System.out.print("Enter Session ID: ");
 
-                            int feedbackSessionId =
-                                    sc.nextInt();
+							int feedbackSessionId = sc.nextInt();
 
-                            sc.nextLine();
+							sc.nextLine();
 
-                            feedbackService
-                                    .getFeedbackBySessionId(
-                                            feedbackSessionId);
+							feedbackService.getFeedbackBySessionId(feedbackSessionId);
 
-                            break;
+							break;
 
-                        // ================= LOGOUT =================
+						// ================= LOGOUT =================
 
-                        case 15:
+						case 15:
 
-                            System.out.println(
-                                    "Logged Out Successfully");
+							System.out.println("Logged Out Successfully");
 
-                            break;
+							break;
 
-                        default:
+						default:
 
-                            System.out.println(
-                                    "Invalid Choice");
-                        }
+							System.out.println("Invalid Choice");
+						}
 
-                        // Exit student menu after logout
+						// Exit student menu after logout
 
-                        if (studentChoice == 15) {
+						if (studentChoice == 15) {
 
-                            break;
-                        }
-                    }
+							break;
+						}
+					}
 
-                } else {
+				} else {
 
-                    System.out.println(
-                            "Invalid Email or Password");
-                }
+					System.out.println("Invalid Email or Password");
+				}
 
-                break;
+				break;
 
-            // ================= EXIT =================
+			// ================= EXIT =================
 
-            case 3:
+			case 3:
 
-                System.out.println(
-                        "Thank You!");
+				System.out.println("Thank You!");
 
-                sc.close();
+				sc.close();
 
-                return;
+				return;
 
-            default:
+			default:
 
-                System.out.println(
-                        "Invalid Choice");
-            }
-        }
-    }
+				System.out.println("Invalid Choice");
+			}
+		}
+	}
 }
